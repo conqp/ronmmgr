@@ -7,6 +7,7 @@ const PROGRAM_FILES_X86_ENV_KEY: &str = "ProgramFiles(x86)";
 const STEAM_DIR: &str = "Steam";
 const READY_OR_NOT_DIR: &str = r"steamapps\common\Ready Or Not";
 const PAKS_DIR: &str = r"ReadyOrNot\Content\Paks";
+const MODS_IO: &str = "mod.io";
 
 pub struct Mod {
     name: String,
@@ -47,7 +48,7 @@ impl ModsIo {
                 .as_ref()
                 .join(PathBuf::from(READY_OR_NOT_DIR))
                 .join(PathBuf::from(PAKS_DIR))
-                .join(PathBuf::from("mod.io")),
+                .join(PathBuf::from(MODS_IO)),
         }
     }
 
