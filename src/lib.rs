@@ -97,8 +97,7 @@ impl Default for ModsIo {
         Self::new(
             PathBuf::from(
                 var(PROGRAM_FILES_X86_ENV_KEY)
-                    .unwrap_or_else(|_| "C:/Program Files (x86)".to_string())
-                    .as_str(),
+                    .unwrap_or_else(|_| "C:/Program Files (x86)".to_string()),
             )
             .join(PathBuf::from(STEAM_DIR)),
         )
